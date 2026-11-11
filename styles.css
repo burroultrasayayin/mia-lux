@@ -1,0 +1,81 @@
+/* Mia Lux — simple styles for a small starter website */
+:root {
+  --sand: #f6efe4;
+  --ink: #1c1a17;
+  --muted: #5c564d;
+  --ocean: #1f5f66;
+  --ocean-dark: #16474c;
+  --white: #fffcf8;
+  --line: #e4d8c8;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: var(--sand);
+  color: var(--ink);
+  line-height: 1.6;
+}
+a { color: var(--ocean); }
+a:hover { color: var(--ocean-dark); }
+img { max-width: 100%; display: block; }
+
+.site-header, .site-footer, .wrap {
+  width: min(1080px, calc(100% - 2rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 0;
+}
+.logo {
+  font-size: 1.4rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+}
+nav { display: flex; flex-wrap: wrap; gap: 0.9rem 1.1rem; }
+nav a { text-decoration: none; color: var(--muted); font-family: Georgia, serif; }
+nav a:hover { color: var(--ink); }
+
+.hero {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 3rem 1.75rem;
+  margin: 0.5rem 0 2rem;
+}
+.hero h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.15; margin: 0 0 0.75rem; }
+.hero p { font-size: 1.15rem; color: var(--muted); margin: 0; max-width: 38rem; }
+
+.grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-bottom: 2.5rem; }
+.card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 1.35rem 1.25rem;
+}
+.card h2, .card h3 { margin-top: 0; }
+.btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  background: var(--ocean);
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+}
+.btn:hover { background: var(--ocean-dark); color: var(--white); }
+.note { color: var(--muted); font-size: 0.95rem; }
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.5rem 0 2.5rem;
+  color: var(--muted);
+}
+article.post { background: var(--white); border: 1px solid var(--line); padding: 1.5rem 1.35rem; margin-bottom: 1.25rem; }
+article.post h2 { margin-top: 0; }
+.date { color: var(--muted); font-size: 0.95rem; }
